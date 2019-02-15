@@ -1,0 +1,34 @@
+<!-- <?xml version="1.0" encoding="UTF-8"?> -->
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" 
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+<bean id="customer" class="com.vidhyac.beans.Customer">
+<!-- customerId, customerName, customerContact, customerAddress. -->
+<!-- <property name="customerId" value="164457"/>
+<property name="customerName" value="VidhyaC"/>
+<property name="customerContact" value="9566940124"/>
+<property name="customerAddress" ref="address"/> -->
+<!-- public Customer(int customerId, String customerName, long customerContact,
+			Address customerAddress) { -->
+<constructor-arg index="0" value="164457"/>
+<constructor-arg index="1" value="VidhyaC"/>
+<constructor-arg index="2" value="9566940124"/>
+<constructor-arg index="3" ref="address"/>
+
+</bean>
+	<!-- //street, city, state, zip, country -->
+<bean id="address" class="com.vidhyac.beans.Address">
+
+<!-- <property name="street" value="Polepettai"/>
+<property name="city" value="Tuticorin"/>
+<property name="state" value="TamilNadu"/>
+<property name="zip" value="628002"/>
+<property name="country" value="India"/> -->
+<constructor-arg index="0" value="Polepettai"/>
+<constructor-arg index="1" value="Tuticorin"/>
+<constructor-arg index="2" value="TamilNadu"/>
+<constructor-arg index="3" value="628002"/>
+<constructor-arg index="4" value="India"/>
+
+</bean>
+</beans>

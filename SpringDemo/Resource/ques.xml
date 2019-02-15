@@ -1,0 +1,34 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" 
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+<bean id="quesans" class="com.vidhyac.beans.Question">
+<!-- questionId, question, answers. -->
+<property name="questionId" value="1"/>
+<property name="question" value="How are you?"/>
+<property name="answersList" >
+<list>
+	<value>Great</value>
+	<value>Fine</value>
+	<value>Not Good</value>
+	<value>Great</value>
+</list>
+</property>
+<property name="answersSet" >
+<set>
+	<value>Great</value>
+	<value>Fine</value>
+	<value>Not Good</value>
+	<value>Great</value>
+</set>
+</property>
+<property name="answersMap" >
+<map>
+	<entry key="1" value="Great"/>
+	<entry key="2" value="Good"/>
+	<entry key="3" value="Fine"/>
+	<entry key="4" value="Not Good"/>
+	<entry key="5" value="Great"/>
+</map>
+</property>
+</bean>
+</beans>

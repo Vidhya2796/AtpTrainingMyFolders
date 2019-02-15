@@ -1,0 +1,62 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" 
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<!-- public BankAccount(long accountId, String accountHolderName,
+			String accountType, double accountBalance)  -->
+			
+<beans>
+<!-- <bean name="repos" class="com.vidhyac.beans.bank.BankAccountRepositoryImpl">
+<property name="acntList" ref="account1">
+<list>
+<contructor-arg index="0" value="101"/>
+<contructor-arg index="1" value="VidhyaC"/>
+<contructor-arg index="2" value="Savings"/>
+<contructor-arg index="3" value="30000"/>
+</list>
+</property>]
+</bean>
+
+<bean name="account1" class="com.vidhyac.beans.bank.BankAccount">
+<property name="">
+<list>
+<contructor-arg index="0" value="101"/>
+<contructor-arg index="1" value="VidhyaC"/>
+<contructor-arg index="2" value="Savings"/>
+<contructor-arg index="3" value="30000"/>
+</list>
+
+</property>
+</bean>
+
+
+
+ -->
+ 	<!-- private long accountId;
+	private String accountHolderName;
+	private String accountType;
+	private double accountBalance;
+	 -->
+ <bean id="account1" class="com.vidhyac.beans.bank.BankAccount">
+ <property name="accountId" value="101"/>
+ <property name="accountHolderName" value="VidhyaC"/>
+ <property name="accountType" value="Savings"/>
+ <property name="accountBalance" value="30000"/>
+ </bean>
+ 
+ <bean id="repos" class="com.vidhyac.beans.bank.BankAccountRepositoryImpl">
+ <property name="acntList">
+ <list>
+ <ref bean="account1"
+ </list>
+ </property>
+ </bean>
+ 
+ <bean id="service" class="com.vidhyac.beans.bank.BankAccountServiceImpl">
+ <property name="accountRepos" ref="repos"/>
+ </bean>
+ 
+ <bean id="controller" class="com.vidhyac.beans.bank.BankAccountController">
+ <property name="accountService" ref="service"/>
+ </bean>
+ 
+</beans>

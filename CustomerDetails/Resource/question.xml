@@ -1,0 +1,40 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" 
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+<bean id="ques" class="com.vidhyac.question.Question">
+<property name="questionId" value="1"/>
+<property name="question" value="Where do you stay?"/>
+<property name="answersList">
+<list>
+<value>CHENNAI</value>
+<value>BANGALORE</value>
+<value>BANGALORE</value>
+<value>HYDERABAD</value>
+<value>MUMBAI</value>
+</list>
+</property>
+<property name="answersSet">
+<set>
+<value>MUMBAI</value>
+<value>CHENNAI</value>
+<value>BANGALORE</value>
+<value>BANGALORE</value>
+<value>HYDERABAD</value>
+<value>MUMBAI</value>
+</set>
+</property>
+
+<property name="answersMap">
+<map>
+<entry key="1" value="MUMBAI"/>
+<entry key="2" value="BANGALORE"/>
+<entry key="3" value="PUNE"/>
+<entry key="4" value="HYDERABAD"/>
+<entry key="5" value="DELHI"/>
+<entry key="6" value="HYDERABAD"/>
+
+</map>
+</property>
+
+</bean>
+</beans>
